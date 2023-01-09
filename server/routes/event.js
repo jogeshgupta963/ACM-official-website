@@ -21,7 +21,7 @@ router.route('/').get(getAllEvent).post(auth, admin, addEvent);
 router
   .route('/:event_id')
   .put(auth, admin, updateEvent)
-  .get(auth, getEvent)
+  .get( getEvent)
   .delete(auth, admin, deleteEvent);
 
 router.post(

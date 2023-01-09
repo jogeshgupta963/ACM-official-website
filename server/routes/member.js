@@ -21,7 +21,7 @@ router
 
 router
   .route('/profile/:_id')
-  .get(auth, getMemberById)
+  .get( getMemberById)
   .put(auth, updateMemberById)
   .delete(auth, deleteMemberProfile);
 

@@ -12,11 +12,11 @@ const {
   deleteProject,
 } = require('../controllers/project.js');
 
-router.route('/').post(auth, admin, createProject).get(auth, getAllProject);
+router.route('/').post(auth, admin, createProject).get(getAllProject);
 
 router
   .route('/:project_id')
-  .get(auth, getProject)
+  .get( getProject)
   .put(auth, admin, updateProject)
   .delete(auth, admin, deleteProject);
 
